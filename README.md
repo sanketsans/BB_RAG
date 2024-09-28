@@ -70,4 +70,10 @@ vector_store = FAISS.load_local(
 retriever = vector_store.as_retriever()
 ```
 
+## Additionally you can test the program using 
+```
+pip install -r requirements.txt
+python test_bb_rag.py
+```
+
 
