@@ -65,6 +65,7 @@ vector_store = FAISS.load_local(
 <br/>
 **STEP: III - Use as retriver / similarity search**
 <br/>
+
 ```
 retriever = vector_store.as_retriever()
 ```
