@@ -40,3 +40,33 @@ I gave another prompt as ``query: Who is Elon Musk ``
 The output is : 
 <br/>
 "I don't know who Elon Musk is. The name does not appear in any of the provided documents."
+
+## To use the vector store : 
+
+**STEP: I - Download the entire repo (this includes the folder)** 
+<br/>
+```
+repo_id = "sanketsans/Breaking-Bad"
+hf_hub_download(repo_id=repo_id, repo_type="dataset", revision="main", local_dir=local_dir, allow_pickle=True)
+```
+<br/>
+<br/>
+
+**STEP: II - Import FAISS and load the indexes**
+<br/>
+```
+from langchain_community.vectorstores import FAISS
+
+vector_store = FAISS.load_local(
+    "faiss_index", embeds, allow_dangerous_deserialization=True
+)
+```
+<br/>
+<br/>
+**STEP: III - Use as retriver / similarity search**
+<br/>
+```
+retriever = vector_store.as_retriever()
+```
+
+
