@@ -1,0 +1,7 @@
+langchain_community
+faiss 
+faiss-cpu
+faiss-gpu 
+langchain_core
+langchain 
+huggingface_hub
